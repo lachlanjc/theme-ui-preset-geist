@@ -1,35 +1,58 @@
-# @hackclub/theme
+# `theme-ui-preset-geist`
 
-[Theme UI](https://theme-ui.com) theme for [Hack Club](https://hackclub.com)
+[Theme UI](https://theme-ui.com) theme preset, derived from [Geist UI](https://geist-ui.dev).
 
 ```bash
-yarn add @hackclub/theme
-# npm i @hackclub/theme
+yarn add theme-ui-preset-geist
+# npm i theme-ui-preset-geist
 ```
 
-Check out theme: [**theme.hackclub.com**](https://theme.hackclub.com)
+- Dark mode included
+- Syntax highlighting theme included
+- Variants inspired by Geist components:
+  - Avatars
+  - Badges
+  - Buttons
+  - Cards
+  - Containers
+  - Forms: input, textarea, select, radio, checkbox
+
+See a preview/documentation: [**theme-ui-preset-geist.vercel.app**](https://theme-ui-preset-geist.vercel.app)
 
 ## Usage
 
 ```js
 import { ThemeProvider } from 'theme-ui'
-import theme from '@hackclub/theme'
+import theme from 'theme-ui-preset-geist'
 
 export default ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 ```
 
-### Fonts
-
-This package also bundles 3 CSS files that include Hack Club’s webfonts:
-`reg.css`, `reg-bold.css`, & `reg-ital-bold.css`.
-To use, just import straight from the package:
+Making your own modifications:
 
 ```js
-import '@hackclub/theme/fonts/reg-bold.css'
+import { ThemeProvider, merge } from 'theme-ui'
+import theme from 'theme-ui-preset-geist'
+
+const brandTheme = merge(theme, {
+  colors: {
+    brand: '#ff6d00',
+  },
+})
+
+export default ({ children }) => (
+  <ThemeProvider theme={brandTheme}>{children}</ThemeProvider>
+)
 ```
 
-(In a Next.js project, [place](https://nextjs.org/docs/basic-features/built-in-css-support) in the `pages/_app.js` file.)
+## Contributing
+
+All types of contributions welcome!
+
+1. Clone, run `yarn` to install dev dependency ([microbundle](https://github.com/developit/microbundle))
+2. While editing, run `yarn watch`
+3. In the docs directory, `yarn` then `yarn dev` to see your changes live
 
 MIT License
