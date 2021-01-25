@@ -74,7 +74,6 @@ export const colors = {
       background: defaultColors.black,
       secondary: darkColors.gray[5],
       selection: defaultColors.purple,
-      link: defaultColors.white,
       ...darkColors,
     },
   },
@@ -86,7 +85,7 @@ export const breakpoints = ['600px', '768px', '960px', '1200px']
 
 export const fonts = {
   body:
-    '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    '"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif',
   heading: 'inherit',
   monospace:
     'ui-monospace, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace',
@@ -135,17 +134,17 @@ export const radii = {
   small: '',
   large: '10px',
   pill: '9999px',
+  circle: '',
 }
 radii.small = radii.default
+radii.circle = radii.pill
 
 export const shadows = {
   default: '0 4px 4px 0 rgba(0,0,0,0.02)',
-  dropdown: '',
   small: '0 5px 10px rgba(0,0,0,0.12)',
   medium: '0 8px 30px rgba(0,0,0,0.12)',
   large: '0 30px 60px rgba(0,0,0,0.12)',
 }
-shadows.dropdown = shadows.default
 
 export const styles = {
   root: {
@@ -162,7 +161,7 @@ export const styles = {
     minHeight: '100%',
     position: 'relative',
     overflowX: 'hidden',
-    '::selection': {
+    '& ::selection': {
       bg: 'selection',
       color: 'text',
     },
@@ -205,44 +204,46 @@ export const styles = {
 
   'h1,h2,h3,h4,h5,h6': {
     fontFamily: 'heading',
-    m: 0,
+    mt: 0,
     mb: '0.625rem',
     color: 'inherit',
   },
   h1: {
-    fontSize: '3rem',
+    fontSize: 5,
     letterSpacing: '-0.066875rem',
-    lineHeight: '1.5',
+    lineHeight: 1.5,
     fontWeight: 'bold',
   },
   h2: {
-    fontSize: '2.25rem',
+    fontSize: 4,
     letterSpacing: '-0.020625rem',
     fontWeight: 'heading',
   },
   h3: {
-    fontSize: '1.5rem',
+    fontSize: 3,
     letterSpacing: '-0.029375rem',
     fontWeight: 'heading',
   },
   h4: {
-    fontSize: '1.25rem',
+    fontSize: 2,
     letterSpacing: '-0.020625rem',
     fontWeight: 'heading',
   },
   h5: {
-    fontSize: '1rem',
+    fontSize: 1,
     letterSpacing: '-0.01125rem',
     fontWeight: 'heading',
   },
   h6: {
-    fontSize: '0.875rem',
+    fontSize: 0,
     letterSpacing: '-0.005625rem',
     fontWeight: 'heading',
   },
 
   ul: {
-    margin: '1rem 0 1rem 0.9375rem',
+    mt: 3,
+    ml: 0,
+    mb: 2,
     color: 'text',
     padding: 0,
     listStyleType: 'none',
@@ -353,6 +354,7 @@ export const styles = {
       fontWeight: 'body',
       letterSpacing: 0,
       textAlign: 'left',
+      textTransform: 'uppercase',
       height: '2.5rem',
       padding: '0 .625rem',
       ':first-of-type': {

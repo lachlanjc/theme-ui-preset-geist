@@ -14,6 +14,7 @@ const ColorSwitcher = props => {
         transition: 'box-shadow .125s ease-in-out',
         ':hover,:focus': {
           boxShadow: '0 0 0 2px',
+          color: 'success',
           outline: 'none'
         }
       }}
