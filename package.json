@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/lachlanjc/theme-ui-preset-geist.git"
   },
-  "dependencies": {
+  "devDependencies": {
     "microbundle": "^0.13.0"
   }
 }
