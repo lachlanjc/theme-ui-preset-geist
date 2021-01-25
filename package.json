@@ -1,7 +1,7 @@
 {
   "name": "theme-ui-preset-geist",
   "description": "Theme UI preset derived from Geist UI",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Lachlan Campbell <lachlanjc@hey.com> (https://lachlanjc.com)",
   "source": "src/index.ts",
   "main": "dist/index.js",
