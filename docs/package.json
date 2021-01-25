@@ -1,5 +1,5 @@
 {
-  "name": "theme-ui-preset-docs",
+  "name": "theme-ui-preset-geist-docs",
   "version": "0.0.1",
   "author": "Lachlan Campbell (https://lachlanjc.com) <lachlanjc@hey.com>",
   "license": "MIT",
@@ -18,6 +18,6 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "theme-ui": "^0.6.0-alpha.6",
-    "theme-ui-preset-geist": "file:../"
+    "theme-ui-preset-geist": "latest"
   }
 }

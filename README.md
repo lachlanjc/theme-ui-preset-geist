@@ -51,8 +51,10 @@ export default ({ children }) => (
 
 All types of contributions welcome!
 
-1. Clone, run `yarn` to install dev dependency ([microbundle](https://github.com/developit/microbundle))
-2. While editing, run `yarn watch`
-3. In the docs directory, `yarn` then `yarn dev` to see your changes live
+1. Fork this repo & clone it
+2. Run `yarn` to install the development dependency ([microbundle](https://github.com/developit/microbundle))
+3. Run `yarn link` so docs site can use your local version
+4. Run `yarn watch` to continuously compile changes
+5. In the docs directory, `yarn link theme-ui-preset-geist` to use the local version instead of the published package, then `yarn` to install dependencies & `yarn dev` to see your changes live
 
 MIT License
