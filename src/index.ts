@@ -85,7 +85,7 @@ export const breakpoints = ['600px', '768px', '960px', '1200px']
 
 export const fonts = {
   body:
-    '"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif',
+    'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif',
   heading: 'inherit',
   monospace:
     'ui-monospace, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace',
@@ -494,11 +494,9 @@ export const buttons = {
     padding: '0 1.375rem',
     position: 'relative',
     textAlign: 'center',
-    textTransform: 'uppercase',
     transition: '.2s ease',
     transitionProperty: 'color, background-color, border-color, box-shadow',
     userSelect: 'none',
-    whiteSpace: 'nowrap',
     width: 'auto',
     ':hover,:focus': {
       color: 'text',
